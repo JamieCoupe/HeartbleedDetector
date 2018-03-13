@@ -10,36 +10,40 @@ import smtplib
 import getpass
 
 # Set up global variables
-usrname = " "
+device_name = " "
+interface = " "
+msg = " "
 passwd = " "
 target = " "
-msg = " "
-interface = " "
+usrname = " "
 
 
 # Function to set up config variables
 def set_up():
 
     # Collecting global variable
-    global usrname
+    global device_name
+    global interface
+    global msg
     global passwd
     global target
-    global msg
-    global interface
+    global usrname
 
     # User input
-    # usrname = raw_input("Please enter your gmail email here (without domain): ") + "@gmail.com"
-    # passwd = raw_input('Password: ')
-    # target = raw_input("Please enter the address you want alerts to be sent to")
-    # msg = raw_input("Please enter the alert message to send: ")
-    # interface = raw_input("Please enter the name of the interface you wish to monitor : ")
-
+    """device_name = raw_input("Please enter the name of this device")
+    interface = raw_input("Please enter the name of the interface you wish to monitor : ")
+    msg = device_name + ": " + raw_input("Please enter the alert message to send: ")
+    passwd = raw_input('Password: ')
+    target = raw_input("Please enter the address you want alerts to be sent to")
+    usrname = raw_input("Please enter your gmail email here (without domain): ") + "@gmail.com"
+    """
     # Static values for testing
-    usrname = "heartbleed.python@gmail.com"
+    device_name = "heartbleed vulnerable VM"
+    interface = "eth0"
+    msg = "This is a heartbleed alert. Your " + device_name + " device is possibly being targeted"
     passwd = "heartbleed"
     target = "jamie.coupe.jc@gmail.com"
-    msg = "This is a heartbleed alert"
-    interface = "eth0"
+    usrname = "heartbleed.python@gmail.com"
 
     return 0
 

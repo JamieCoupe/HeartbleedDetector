@@ -108,11 +108,11 @@ def send_alert(uname, password, send_to, message):
     server.quit()
 
     # debugging printing variables
-    print usrname
-    print passwd
-    print target
-    print msg
-    print interface
+#   print usrname
+#   print passwd
+#   print target
+#   print msg
+#   print interface
 
 
 # To print single function
